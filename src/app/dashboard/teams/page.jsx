@@ -2,9 +2,10 @@ import React from 'react';
 
 function Page(props) {
  return (
-  <div>
-
-  </div>
- );}
+     <div>
+      <h1>Teams</h1>
+     </div>
+ );
+}
 
 export default Page;
