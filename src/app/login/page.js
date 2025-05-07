@@ -5,31 +5,31 @@ import {Button} from "@/components/ui/button";
 import Link from "next/link";
 import * as z from "zod"
 import {useForm} from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import {zodResolver} from "@hookform/resolvers/zod";
 import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+import {Input} from "@/components/ui/input"
 import {SiSimplelogin} from "react-icons/si";
 
 const formSchema = z.object({
-    email:z.string().email(),
-    password:z.string()
+    email: z.string().email(),
+    password: z.string()
 })
 
 
 function LoginPage() {
 
-    const form=useForm({
-        resolver:zodResolver(formSchema)
+    const form = useForm({
+        resolver: zodResolver(formSchema)
     })
     const onSubmit = (formData) => {
 
-        console.log("Form Submitted ",formData)
+        console.log("Form Submitted ", formData)
 
     }
 
     const onError = (errors) => {
 
-        console.log("Error ",errors)
+        console.log("Error ", errors)
 
     }
 
@@ -45,21 +45,21 @@ function LoginPage() {
                     </CardHeader>
                     <CardContent>
                         <Form {...form} >
-                            <form className={"flex flex-col"} onSubmit={form.handleSubmit(onSubmit,onError)}>
+                            <form className={"flex flex-col"} onSubmit={form.handleSubmit(onSubmit, onError)}>
                                 {/*Email Field*/}
                                 <FormField
                                     control={form.control}
                                     name="email"
-                                    render={({ field }) => (
+                                    render={({field}) => (
                                         <FormItem>
                                             <FormLabel>Email</FormLabel>
                                             <FormControl>
-                                                <Input placeholder="email" {...field} value={field.value||""} />
+                                                <Input placeholder="email" {...field} value={field.value || ""}/>
                                             </FormControl>
                                             <FormDescription>
-                                               This is the email address of you provided
+                                                This is the email address of you provided
                                             </FormDescription>
-                                            <FormMessage />
+                                            <FormMessage/>
                                         </FormItem>
                                     )}
                                 />
@@ -69,21 +69,28 @@ function LoginPage() {
                                 <FormField
                                     control={form.control}
                                     name="password"
-                                    render={({ field }) => (
+                                    render={({field}) => (
                                         <FormItem>
                                             <FormLabel>Password</FormLabel>
                                             <FormControl>
-                                                <Input placeholder="password" {...field} value={field.value||""} />
+                                                <Input placeholder="password" {...field} value={field.value || ""}/>
                                             </FormControl>
                                             <FormDescription>
-                                               This is the password provided
+                                                This is the password provided
                                             </FormDescription>
-                                            <FormMessage />
+                                            <FormMessage/>
                                         </FormItem>
                                     )}
                                 />
 
-                                <Button type="submit">Submit</Button>
+
+                                <Button type="submit">
+                                    <Link href={"/dashboard"}>
+                                        Submit
+                                    </Link>
+                                </Button>
+
+
                             </form>
                         </Form>
                     </CardContent>
@@ -97,7 +104,8 @@ function LoginPage() {
             </div>
 
         </section>
-    );}
+    );
+}
 
 export default LoginPage;
 

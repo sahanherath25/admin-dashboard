@@ -26,7 +26,7 @@ A fully functional admin dashboard built using **Next.js**, **React**, and **Nod
 
 ### Dashboard View
 
-![Dashboard Screenshot](public/screenshots/)
+![Dashboard Screenshot](public/screenshots/dashboard.png)
 
 ### Login Page
 
