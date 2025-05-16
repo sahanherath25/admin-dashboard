@@ -69,11 +69,12 @@ function LoginPage() {
                                 <FormField
                                     control={form.control}
                                     name="password"
+
                                     render={({field}) => (
                                         <FormItem>
                                             <FormLabel>Password</FormLabel>
                                             <FormControl>
-                                                <Input placeholder="password" {...field} value={field.value || ""}/>
+                                                <Input  type={"password"}  placeholder="password" {...field} value={field.value || ""}/>
                                             </FormControl>
                                             <FormDescription>
                                                 This is the password provided

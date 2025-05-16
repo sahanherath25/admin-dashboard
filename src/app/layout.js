@@ -28,7 +28,6 @@ export default function RootLayout({ children }) {
           {/*<Header/>*/}
 
           <main className={"flex-grow  border-black-100 flex  "}>
-
               {children}
           </main>
           {/*<Footer/>*/}

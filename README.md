@@ -40,7 +40,7 @@ A fully functional admin dashboard built using **Next.js**, **React**, and **Nod
 ## 📁 Installation
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/sahanherath25/admin-dashboard.git
 cd your-repo-name
 npm install
 npm run dev

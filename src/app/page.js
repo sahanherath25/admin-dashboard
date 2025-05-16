@@ -7,7 +7,7 @@ export default function Home() {
 
     return (
         <section className={"h-screen w-full flex items-center"}>
-            <div className={"flex flex-col border border-indigo-600 justify-center items-center w-[90%] mx-auto "}>
+            <div className={"flex flex-col justify-center items-center w-[90%] mx-auto "}>
 
                 <div className="text-wrapper flex justify-between items-center py-2">
                     <RiAdminFill size={40} color={"#D91656"}/>
